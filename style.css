@@ -1,0 +1,256 @@
+body { 
+    /* Body alignment and background settings */
+    margin: 0;
+    padding: 0;
+    background: black; 
+}
+
+/* Ready button alignment */
+.left{
+
+    position: absolute;
+    top: 45%;
+    left: 15%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+/* Ready button settings   */
+.btn{
+
+    background: none;
+    border: 4px solid #0ef;
+    color: #0ef;
+    text-transform: uppercase;
+    padding: 18px 40px;
+    min-width: 200px;
+    margin: 35px;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    position: relative;
+    display: inline-block;
+    font-size: 1.5em;
+    letter-spacing: .1em; 
+}
+
+/*Button before settings */
+.btn::before{
+
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+}
+/*Settings before we hover over the button*/
+.btn1::before{
+
+    transform: scaleX(0);
+}
+
+/*Settings to hover  the button */
+.btn1:hover::before{
+
+    transform: scaleX(1);
+}
+
+/* Button 2*/
+/* Aligning Let's Go to the center*/
+.center{ 
+
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+/*Style setting */
+a{
+
+   position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%,-50%);
+    color: #34ffea;
+    overflow: hidden;
+    padding: 30px 70px;
+    font-size: 25px;
+    text-decoration: none;
+    font-family: "montserrat", sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 20px 50px rgb(255 255 255 /5%);
+}
+
+/*Style setting before action there's any action */
+a:before {
+
+    position: absolute;
+    width: 50%;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    content: '';
+    background: rgb(142 255 240 / 10%);
+}
+
+/*Selector to match all the elements on the nth child of its parent */
+a span:nth-child(1){
+
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #002b9d,#34ffea);
+    animation: animate1 2s linear infinite;
+}
+
+/*Rules to create animation */
+@keyframes animate1 {
+
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+/*Selector to match all the elements on the nth child of its parent */
+a span:nth-child(2) {
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, #002b9d, #34ffea);
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+}
+
+/*Rules to create animation */
+@keyframes animate2 {
+
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+
+/*Selector to match all the elements on the nth child of its parent */
+a span:nth-child(3){
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to left, #002b9d, #34ffea);
+    animation: animate3 2s linear infinite;
+}
+
+/*Rules to create animation */
+@keyframes animate3 {
+
+    0% {
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+/*Selector to match all the elements on the nth child of its parent */
+a span:nth-child(4){
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to top, #002b9d, #34ffea);
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
+}
+
+/*Rules to create animation */
+@keyframes animate4{
+
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+/*Here we Go button alignment */
+.right{
+
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+/*Style setting */
+a {
+
+    position: relative;
+    display: inline-block;
+    font-size: 1.5em;
+    letter-spacing: .1em;
+    color: #0ef;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #0ef;
+    padding: 10px 30px;
+    z-index: 1;
+    overflow: hidden;
+    transition: color 1s, box-shadow 1s;
+}
+
+/*Hover settings for the lets go button*/
+a:hover{
+
+    transition-delay: 0s, 1s;
+    color: #fff;
+    box-shadow: 
+        0 0 10px #0ef,
+        0 0 20px #0ef,
+        0 0 40px #0ef,
+        0 0 80px #0ef,
+        0 0 160px #0ef;
+}
+/*Directed to the button before the hover effect */
+a::before {
+
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 0;
+    height: 100%;
+    background: #0ef;
+    transform: skewX(35deg);
+    z-index: -1;
+    transition: 1s;
+}
+/*Hover before setting*/
+a:hover:before {
+    
+    width: 100%;
+}
+
